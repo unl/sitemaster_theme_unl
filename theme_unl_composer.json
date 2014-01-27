@@ -1,0 +1,17 @@
+{
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.unl.edu",
+            "vendor-alias": "pear-unl"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/unl/phpunltemplates.git"
+        }
+    ],
+    "require": {
+        "pear-unl/UNL_DWT": "*",
+        "UNL/PHPUNLTemplates": "dev-composer"
+    }
+}
