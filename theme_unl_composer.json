@@ -12,6 +12,7 @@
     ],
     "require": {
         "pear-unl/UNL_DWT": "*",
+        "pear-unl/UNL_Cache_Lite" : "*",
         "UNL/PHPUNLTemplates": "dev-master"
     }
 }
