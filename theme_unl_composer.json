@@ -12,6 +12,6 @@
     ],
     "require": {
         "pear-unl/UNL_DWT": "*",
-        "UNL/PHPUNLTemplates": "dev-composer"
+        "UNL/PHPUNLTemplates": "dev-master"
     }
 }
