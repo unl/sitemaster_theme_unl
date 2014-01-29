@@ -3,7 +3,6 @@
 \UNL_Templates::$options['sharedcodepath'] = dirname(__FILE__).'/sharedcode';
 
 $url     = \SiteMaster\Core\Config::get('URL');
-$baseURL = \SiteMaster\Core\Config::get('URL');
 
 $page    = UNL_Templates::factory('Fixed');
 
@@ -16,6 +15,13 @@ $page->breadcrumbs  = '
     <li>SiteMaster</li>
 </ul>
 ';
+
+$page->addScriptDeclaration('
+    WDN.jQuery(function() {
+      WDN.setPluginParam("idm", "login", "' . $url . 'auth/unl/");
+      WDN.setPluginParam("idm", "logout","' . $url . 'auth/unl/logout/");
+    });
+');
 
 $scripts_event = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
     \SiteMaster\Core\Events\Theme\RegisterScripts::EVENT_NAME,
