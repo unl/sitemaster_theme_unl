@@ -1,5 +1,5 @@
 <?php
-namespace SiteMaster\Plugins\Theme_Unl;
+namespace SiteMaster\Plugins\Theme_unl;
 
 use SiteMaster\Core\Plugin\PluginInterface;
 use SiteMaster\Core\Events\RegisterTheme;
