@@ -51,6 +51,9 @@ $page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
 $page->loadSharedCodeFiles();
 
 $page->maincontentarea = '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
+foreach ($app->getFlashBagMessages() as $message) {
+    $page->maincontentarea .= $savvy->render($message);
+}
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
