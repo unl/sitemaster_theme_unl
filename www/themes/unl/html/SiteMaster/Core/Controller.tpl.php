@@ -17,7 +17,7 @@ $page->breadcrumbs  = '
 ';
 
 $page->addScriptDeclaration('
-    WDN.jQuery(function() {
+    require(["idm"], function(idm) {
       WDN.setPluginParam("idm", "login", "' . $url . 'auth/unl/");
       WDN.setPluginParam("idm", "logout","' . $url . 'auth/unl/logout/");
     });
