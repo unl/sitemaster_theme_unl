@@ -51,6 +51,23 @@ $page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
 $page->loadSharedCodeFiles();
 
 $page->maincontentarea = '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
+foreach ($app->getFlashBagMessages() as $message) {
+    $page->maincontentarea .= $savvy->render($message);
+}
+
+if (isset($app->options['site_id'])) {
+    $site = \SiteMaster\Core\Registry\Site::getByID($app->options['site_id']);
+    if ($site) {
+        $siteNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
+            \SiteMaster\Core\Events\Navigation\SiteCompile::EVENT_NAME,
+            new \SiteMaster\Core\Events\Navigation\SiteCompile($site)
+        );
+
+        $page->maincontentarea .= $savvy->render($siteNav);
+    }
+}
+
+
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
