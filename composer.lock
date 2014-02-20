@@ -1,0 +1,109 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "267bf188d243985e8de1a5491f4655fe",
+    "packages": [
+        {
+            "name": "UNL/PHPUNLTemplates",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unl/phpunltemplates.git",
+                "reference": "0528e0df5802b31bfeab98da1e4a4b1c003d7219"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/0528e0df5802b31bfeab98da1e4a4b1c003d7219",
+                "reference": "0528e0df5802b31bfeab98da1e4a4b1c003d7219",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "UNL\\": "src/"
+                }
+            },
+            "include-path": [
+                "src"
+            ],
+            "support": {
+                "source": "https://github.com/unl/phpunltemplates/tree/master",
+                "issues": "https://github.com/unl/phpunltemplates/issues"
+            },
+            "time": "2014-02-05 01:16:32"
+        },
+        {
+            "name": "pear-pear.unl.edu/UNL_Cache_Lite",
+            "version": "0.1.0",
+            "dist": {
+                "type": "file",
+                "url": "http://pear.unl.edu/get/UNL_Cache_Lite-0.1.0.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.1.2.0"
+            },
+            "replace": {
+                "pear-unl/unl_cache_lite": "== 0.1.0.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
+            ],
+            "description": "This is a port of the Cache_Lite package from PEAR, with support for PHP 5 and\nexceptions.\nThis package is a little cache system optimized for file containers. It is fast\nand safe (because it uses file locking and/or anti-corruption tests)."
+        },
+        {
+            "name": "pear-pear.unl.edu/UNL_DWT",
+            "version": "0.9.0",
+            "dist": {
+                "type": "file",
+                "url": "http://pear.unl.edu/get/UNL_DWT-0.9.0.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.0.0.0"
+            },
+            "conflict": {
+                "pear-pear.unl.edu/unl_templates": "<=0.5.2.0"
+            },
+            "replace": {
+                "pear-unl/unl_dwt": "== 0.9.0.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
+            ],
+            "description": "\nThis package generates php class files (objects) from Dreamweaver template files.\n"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "unl/phpunltemplates": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
