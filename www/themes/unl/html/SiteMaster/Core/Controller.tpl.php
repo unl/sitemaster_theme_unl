@@ -67,7 +67,14 @@ if (isset($app->options['site_id'])) {
     }
 }
 
+$prepend = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
+    \SiteMaster\Core\Events\Theme\PrependOutput::EVENT_NAME,
+    new \SiteMaster\Core\Events\Theme\PrependOutput($context->output->getRawObject(), $app->options['format'])
+);
 
+foreach ($prepend->getPrepend() as $item) {
+    $page->maincontentarea .= $savvy->render($item);
+}
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
