@@ -34,8 +34,18 @@ $pages = $context->getPages();
             </div>
         </div>
     </section>
-    <section>
 
+    <?php
+    if (!$context->isComplete()) {
+        ?>
+        <div class="panel notice">
+            The scan has not finished for this site yet.  Refresh the page to get the most recent progress.
+        </div>
+    <?php
+    }
+    ?>
+    
+    <section>
         <?php
         if ($previous_scan) {
             echo $savvy->render($context->getChangedMetricGrades());
