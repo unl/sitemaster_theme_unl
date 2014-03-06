@@ -62,8 +62,13 @@ $pages = $context->getPages();
 
         <div class="wdn-grid-set">
             <div class="bp1-wdn-col-one-third">
-                <div class="hot-spots">
-                    <h3>Hot Spots</h3>
+                <section class="hot-spots info-section">
+                    <header>
+                        <h3>Hot Spots</h3>
+                        <div class="subhead">
+                            These are areas on your site that need some love
+                        </div>
+                    </header>
                     <?php
                     foreach ($plugin_manager->getMetrics() as $metric) {
                         $metric_record = $metric->getMetricRecord();
@@ -74,7 +79,7 @@ $pages = $context->getPages();
                     <?php
                     }
                     ?>
-                </div>
+                </section>
             </div>
             <div class="bp1-wdn-col-two-thirds">
                 <?php
