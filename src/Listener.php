@@ -37,6 +37,10 @@ class Listener extends PluginListener
             return;
         }
 
+        //Remove the modernizer script that is set by core.  It breaks our templates
+        $event->removeScript(Config::get('URL') . 'www/js/vendor/modernizr.js');
+
+        //Add scripts
         $event->addScript(Config::get('URL') . 'plugins/theme_unl/www/themes/unl/html/js/all.js');
     }
 }
