@@ -3,16 +3,17 @@
 \UNL_Templates::$options['sharedcodepath'] = dirname(__FILE__).'/sharedcode';
 
 $url     = \SiteMaster\Core\Config::get('URL');
+$site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
 $page    = UNL_Templates::factory('Fixed');
 
-$page->doctitle     = '<title>SiteMaster | University of Nebraska-Lincoln</title>';
-$page->titlegraphic = 'SiteMaster';
+$page->doctitle     = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
+$page->titlegraphic = $site_title;
 $page->pagetitle     = '<h1>' . $context->output->getPageTitle() . '</h1>';
 $page->breadcrumbs  = '
 <ul>
     <li><a href="http://www.unl.edu/">UNL</a></li>
-    <li>SiteMaster</li>
+    <li>' . $site_title . '</li>
 </ul>
 ';
 
