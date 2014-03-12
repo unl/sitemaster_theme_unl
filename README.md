@@ -1,4 +1,6 @@
-sitemaster_theme_unl
+A UNL Theme for SiteMaster
 ====================
 
-sitemaster_plugin_migrate_unl 
+To install, simply clone the repository into the sitemaster/plugins directory:
+
+`git clone git@github.com:unl/sitemaster_theme_unl.git theme_unl`
