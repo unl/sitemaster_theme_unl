@@ -51,7 +51,15 @@ $page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
 
 $page->loadSharedCodeFiles();
 
-$page->maincontentarea = '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
+$page->maincontentarea = '<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(["_setAccount", "UA-3203435-18"]); //replace with your unique tracker id
+_gaq.push(["_setDomainName", ".unl.edu"]);
+_gaq.push(["_setAllowLinker", true]);
+_gaq.push(["_trackPageview"]);
+</script>';
+
+$page->maincontentarea .= '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
 foreach ($app->getFlashBagMessages() as $message) {
     $page->maincontentarea .= $savvy->render($message);
 }
