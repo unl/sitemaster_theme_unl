@@ -61,7 +61,7 @@ $site_pass_fail = \SiteMaster\Core\Config::get('SITE_PASS_FAIL');
     ?>
     
     <section class="wdn-grid-set dashboard-metrics">
-        <div class="bp1-wdn-col-one-third">
+        <div class="bp2-wdn-col-one-fourth">
             <div class="visual-island gpa">
                 <span class="dashboard-value"><?php echo $context->gpa ?><?php echo ($site_pass_fail?'%':'') ?></span>
                 <?php 
@@ -73,13 +73,33 @@ $site_pass_fail = \SiteMaster\Core\Config::get('SITE_PASS_FAIL');
                 <span class="dashboard-metric"><?php echo $gpa_name ?></span>
             </div>
         </div>
-        <div class="bp1-wdn-col-one-third">
+        <div class="bp2-wdn-col-one-fourth">
             <div class="visual-island">
-                <span class="dashboard-value"><?php echo $context->getABSNumberOfChanges() ?></span>
-                <span class="dashboard-metric">Changes</span>
+                <?php
+                $arrow = "&#8596; <span class='secondary'>(same)</span>";
+                if ($previous_scan) {
+                    if ($previous_scan->gpa > $context->gpa) {
+                        $arrow = "&#8595; <span class='secondary'>(worse)</span>";
+                    } else if ($previous_scan->gpa < $context->gpa) {
+                        $arrow = "&#8593; <span class='secondary'>(better)</span>";
+                    }
+                }
+                ?>
+                <div class="dashboard-value">
+                    <?php echo $arrow ?>
+                </div>
+                <div class="dashboard-metric">Compared to Last Scan</div>
             </div>
         </div>
-        <div class="bp1-wdn-col-one-third">
+        <div class="bp2-wdn-col-one-fourth">
+            <div class="visual-island">
+                <div class="dashboard-value">
+                    <?php echo $context->getABSNumberOfChanges()  ?>
+                </div>
+                <div class="dashboard-metric">Change(s) Since Last Scan</div>
+            </div>
+        </div>
+        <div class="bp2-wdn-col-one-fourth">
             <div class="visual-island">
                 <span class="dashboard-value"><?php echo $pages->count() ?></span>
                 <span class="dashboard-metric">Pages</span>
