@@ -131,7 +131,7 @@ $site_pass_fail = \SiteMaster\Core\Config::get('SITE_PASS_FAIL');
         ?>
 
         <div class="wdn-grid-set">
-            <div class="bp1-wdn-col-one-third">
+            <div class="bp1-wdn-col-three-sevenths">
                 <section class="hot-spots info-section">
                     <header>
                         <h3>Hot Spots</h3>
@@ -151,11 +151,10 @@ $site_pass_fail = \SiteMaster\Core\Config::get('SITE_PASS_FAIL');
                     ?>
                 </section>
             </div>
-            <div class="bp1-wdn-col-two-thirds">
+            <div class="bp1-wdn-col-four-sevenths">
                 <?php
                 echo $savvy->render($pages);
                 ?>
-
             </div>
         </div>
     </section>
