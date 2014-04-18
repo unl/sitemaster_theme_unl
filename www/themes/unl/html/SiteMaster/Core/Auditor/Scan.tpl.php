@@ -7,7 +7,15 @@ $site_pass_fail = $context->isPassFail();
 
 <div class="scan">
     <header>
-        <h2>Scan: <?php echo date("n-j-y g:i a", strtotime($context->start_time)); ?></h2>
+        <h2>
+            <?php
+            $date = date("n-j-y g:i a", strtotime($context->start_time));
+            if (!$context->isComplete()) {
+                $date = '--';
+            }
+            ?>
+            Scan: <?php echo $date ?>
+        </h2>
         <div class="sub-info">
             Status: <?php echo $context->status;?>
             <?php
