@@ -71,7 +71,15 @@ $site_pass_fail = $context->isPassFail();
     <section class="wdn-grid-set dashboard-metrics">
         <div class="bp2-wdn-col-one-fourth">
             <div class="visual-island gpa">
-                <span class="dashboard-value"><?php echo $context->gpa ?><?php echo ($site_pass_fail?'%':'') ?></span>
+                <span class="dashboard-value">
+                    <?php
+                    if ($context->isComplete()) {
+                        echo $context->gpa . ($site_pass_fail?'%':'');
+                    } else {
+                        echo '--';
+                    }
+                    ?>
+                </span>
                 <?php 
                 $gpa_name = 'GPA';
                 if ($site_pass_fail) {
