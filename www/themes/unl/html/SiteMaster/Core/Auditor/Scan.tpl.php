@@ -29,6 +29,7 @@ $site_pass_fail = $context->isPassFail();
     if (!$context->isComplete()) {
         ?>
         <div class="panel notice">
+            <img src="<?php echo $base_url . 'www/images/loading.gif' ?>" />
             This scan has not finished yet.  This page will automatically refresh when the scan has completed.
         </div>
     <?php
