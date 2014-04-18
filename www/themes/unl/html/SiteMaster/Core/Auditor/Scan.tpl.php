@@ -130,31 +130,44 @@ $site_pass_fail = $context->isPassFail();
     </section>
     
     <section>
-        <?php
-        if ($previous_scan) {
-            $changes = $context->getChangedMetricGrades();
-            if ($changes->count() > 20) {
-                ?>
-                <p class="change-list-first">
-                    We suppressed the change list because there were too many changes. <a href="<?php echo $context->getURL() . 'changes/' ?>"> View the changes</a>
-                </p>
-            <?php
-            } else {
-                echo $savvy->render($changes);
-            }
-        } else {
-            //This is the first scan, don't the change list would probably be huge
-            ?>
-            <p class="change-list-first">
-                Normally, a list of changes would be here.  However, this is the first time that we scanned your site.  In the future, you can see changes here.
-            </p>
-        <?php
-        }
-        ?>
-
         <div class="wdn-grid-set">
-            <div class="bp1-wdn-col-three-sevenths">
-                <section class="hot-spots info-section">
+            <div class="bp2-wdn-col-two-sevenths">
+                <section class="in-page-nav info-section">
+                    <header>
+                        <h3>Report Navigation</h3>
+                    </header>
+                    <ul>
+                        <li><a href="#changes">Changes</a></li>
+                        <li><a href="#hot_spots">Hot Spots</a></li>
+                        <li><a href="#pages">Pages</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="bp2-wdn-col-five-sevenths">
+                <section id="changes">
+                    <?php
+                    if ($previous_scan) {
+                        $changes = $context->getChangedMetricGrades();
+                        if ($changes->count() > 20) {
+                            ?>
+                            <p class="change-list-first">
+                                We suppressed the change list because there were too many changes. <a href="<?php echo $context->getURL() . 'changes/' ?>"> View the changes</a>
+                            </p>
+                        <?php
+                        } else {
+                            echo $savvy->render($changes);
+                        }
+                    } else {
+                        //This is the first scan, don't the change list would probably be huge
+                        ?>
+                        <p class="change-list-first">
+                            Normally, a list of changes would be here.  However, this is the first time that we scanned your site.  In the future, you can see changes here.
+                        </p>
+                    <?php
+                    }
+                    ?>
+                </section>
+                <section id="hot_spots" class="hot-spots info-section">
                     <header>
                         <h3>Hot Spots</h3>
                         <div class="subhead">
@@ -172,11 +185,11 @@ $site_pass_fail = $context->isPassFail();
                     }
                     ?>
                 </section>
-            </div>
-            <div class="bp1-wdn-col-four-sevenths">
-                <?php
-                echo $savvy->render($pages);
-                ?>
+                <div id="pages">
+                    <?php
+                    echo $savvy->render($pages);
+                    ?>
+                </div>
             </div>
         </div>
     </section>
