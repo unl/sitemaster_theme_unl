@@ -185,11 +185,11 @@ $site_pass_fail = $context->isPassFail();
                     }
                     ?>
                 </section>
-                <div id="pages">
+                <section id="pages">
                     <?php
                     echo $savvy->render($pages);
                     ?>
-                </div>
+                </section>
             </div>
         </div>
     </section>
