@@ -177,14 +177,14 @@ $site_pass_fail = $context->isPassFail();
                     <?php
                     foreach ($plugin_manager->getMetrics() as $metric) {
                         $metric_record = $metric->getMetricRecord();
-                        $grades = $context->getHotSpots($metric_record->id);
+                        $grades = $context->getHotSpots($metric_record->id, 5);
                         ?>
                         <h4><?php echo $metric->getName()?></h4>
                         <?php
                         if ($grades->count()) {
                             $url = $site->getURL() . 'hot-spots/' . $context->id . '/' . $metric_record->id . '/';
                             ?>
-                            <a href="<?php $url ?>">View all hot spots for <?php echo $metric->getName() ?></a>
+                            <a href="<?php echo $url ?>">View all hot spots for <?php echo $metric->getName() ?></a>
                         <?php
                         }
                         
