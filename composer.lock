@@ -11,18 +11,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unl/phpunltemplates.git",
-                "reference": "0528e0df5802b31bfeab98da1e4a4b1c003d7219"
+                "reference": "953dc4aba884fdd118a79d1d772da9a987c34c3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/0528e0df5802b31bfeab98da1e4a4b1c003d7219",
-                "reference": "0528e0df5802b31bfeab98da1e4a4b1c003d7219",
+                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/953dc4aba884fdd118a79d1d772da9a987c34c3e",
+                "reference": "953dc4aba884fdd118a79d1d772da9a987c34c3e",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "UNL\\": "src/"
+                    "UNL_Templates": "src/"
                 }
             },
             "include-path": [
@@ -32,7 +32,7 @@
                 "source": "https://github.com/unl/phpunltemplates/tree/master",
                 "issues": "https://github.com/unl/phpunltemplates/issues"
             },
-            "time": "2014-02-05 01:16:32"
+            "time": "2014-05-05 14:12:58"
         },
         {
             "name": "pear-pear.unl.edu/UNL_Cache_Lite",
