@@ -87,4 +87,13 @@ foreach ($prepend->getPrepend() as $item) {
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
+$page->leftcollinks = '
+<h3>Related Links</h3>
+<ul>
+<li><a href="http://wdn.unl.edu/">Web Developer Network</a></li>
+<li><a href="http://iim.unl.edu/">Internet and Interactive Media</a></li>
+<li><a href="http://ucomm.unl.edu/">University Communications</a></li>
+<li><a href="http://its.unl.edu/">Information Technology Services</a></li>
+</ul>';
+
 echo $page;
