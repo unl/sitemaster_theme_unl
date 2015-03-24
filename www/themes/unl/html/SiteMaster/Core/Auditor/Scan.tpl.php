@@ -32,7 +32,7 @@ $site_pass_fail = $context->isPassFail();
             ?>
             <div class="panel notice">
                 <img src="<?php echo $base_url . 'www/images/loading.gif' ?>" />
-                This scan has not finished yet.  This page will automatically refresh when the scan has completed.
+                This scan has not finished yet.  This page will automatically refresh when the scan has completed.  In the meantime you can view <a href="<?php echo $site->getURL() . 'scans/' ?>">previous scans</a>.
             </div>
         <?php
         }
