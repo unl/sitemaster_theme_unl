@@ -65,6 +65,9 @@ $site_pass_fail = $context->isPassFail();
                         }
                         ?>
                     </span>
+                    <span class="dashboard-note">
+                        This service can only catch machine-testable problems, you will still have to manually audit your site to ensure that it is accessible, well structured and works correctly.
+                    </span>
                 </div>
             </div>
         <?php
