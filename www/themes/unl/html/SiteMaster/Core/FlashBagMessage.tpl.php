@@ -13,7 +13,7 @@ switch ($context->type) {
 }
 ?>
 
-<div class="wdn_notice overlay-maincontent <?php echo $type ?>">
+<div class="wdn_notice <?php echo $type ?>">
     <div class="close">
         <a href="#" title="Close this notice">Close this notice</a>
     </div>
