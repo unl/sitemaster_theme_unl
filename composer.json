@@ -8,11 +8,18 @@
         {
             "type": "vcs",
             "url": "https://github.com/unl/phpunltemplates.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/unl/phpdwtparser.git"
         }
     ],
     "require": {
-        "pear-unl/UNL_DWT": "*",
+        "unl/php-dwt-parser": "1.0.0-rc.2",
         "pear-unl/UNL_Cache_Lite" : "*",
-        "UNL/PHPUNLTemplates": "dev-master"
-    }
+        "unl/php-wdn-templates": "dev-master"
+    },
+    
+    "minimum-stability": "RC",
+    "prefer-stable": true
 }

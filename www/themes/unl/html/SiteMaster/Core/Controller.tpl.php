@@ -1,11 +1,10 @@
 <?php
-\UNL_Templates::$options['version']        = 4.0;
-\UNL_Templates::$options['sharedcodepath'] = dirname(__FILE__).'/sharedcode';
+use UNL\Templates\Templates;
+
+$page = Templates::factory('Fixed', Templates::VERSION_4_1);
 
 $url     = \SiteMaster\Core\Config::get('URL');
 $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
-
-$page    = UNL_Templates::factory('Fixed');
 
 $page->doctitle     = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
 $page->titlegraphic = $site_title;
@@ -49,8 +48,6 @@ $mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
 
 $page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
 
-$page->loadSharedCodeFiles();
-
 $page->maincontentarea = '<script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(["_setAccount", "UA-3203435-18"]); //replace with your unique tracker id
@@ -88,7 +85,7 @@ $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
 $page->leftcollinks = '
-<h3>Related Links</h3>
+<span role="heading" class="wdn-footer-heading">Related Links</span>
 <ul>
 <li><a href="http://wdn.unl.edu/">Web Developer Network</a></li>
 <li><a href="http://iim.unl.edu/">Internet and Interactive Media</a></li>
