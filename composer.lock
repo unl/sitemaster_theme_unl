@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "618f4a737ddc071065f83f92bf8e543c",
+    "hash": "bc4f8019ca3551d69a67c94df7216260",
     "packages": [
         {
             "name": "pear-pear.unl.edu/UNL_Cache_Lite",
@@ -34,22 +34,25 @@
         },
         {
             "name": "unl/php-dwt-parser",
-            "version": "v1.0.0-rc.2",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unl/phpdwtparser.git",
-                "reference": "9729e967768530809b52e5e861d4aed2698f3579"
+                "reference": "0b49f94c19fb21299fe768ada2ac64989b7c6fbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unl/phpdwtparser/zipball/9729e967768530809b52e5e861d4aed2698f3579",
-                "reference": "9729e967768530809b52e5e861d4aed2698f3579",
+                "url": "https://api.github.com/repos/unl/phpdwtparser/zipball/0b49f94c19fb21299fe768ada2ac64989b7c6fbb",
+                "reference": "0b49f94c19fb21299fe768ada2ac64989b7c6fbb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5",
                 "zaininnari/html-minifier": "*",
                 "zendframework/zend-code": "^2.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
             },
             "bin": [
                 "bin/createTemplates.php"
@@ -60,6 +63,7 @@
                     "UNL\\DWT\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -77,24 +81,20 @@
             ],
             "description": "A PHP library for parsing DWT files and turning them into PHP classes",
             "homepage": "http://wdn.unl.edu/",
-            "support": {
-                "source": "https://github.com/unl/phpdwtparser/tree/v1.0.0-rc.2",
-                "issues": "https://github.com/unl/phpdwtparser/issues"
-            },
-            "time": "2015-12-10 01:55:48"
+            "time": "2015-12-14 23:51:40"
         },
         {
             "name": "unl/php-wdn-templates",
-            "version": "dev-master",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unl/phpunltemplates.git",
-                "reference": "959f32f531678cf482c7d93ce36e79d1845dfc22"
+                "reference": "ddece80fce8611c22fa674a0f36eac3ddf4ca423"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/959f32f531678cf482c7d93ce36e79d1845dfc22",
-                "reference": "959f32f531678cf482c7d93ce36e79d1845dfc22",
+                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/ddece80fce8611c22fa674a0f36eac3ddf4ca423",
+                "reference": "ddece80fce8611c22fa674a0f36eac3ddf4ca423",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,8 @@
                 "unl/php-dwt-parser": "1.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "^0.7.0"
             },
             "type": "library",
             "autoload": {
@@ -110,11 +111,7 @@
                     "UNL\\Templates\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "UNLTest\\Templates\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -137,11 +134,7 @@
             ],
             "description": "A PHP library for rendering the UNL templates",
             "homepage": "http://wdn.unl.edu/",
-            "support": {
-                "source": "https://github.com/unl/phpunltemplates/tree/master",
-                "issues": "https://github.com/unl/phpunltemplates/issues"
-            },
-            "time": "2015-12-14 16:00:44"
+            "time": "2015-12-15 00:14:04"
         },
         {
             "name": "zaininnari/html-minifier",
@@ -409,11 +402,8 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "RC",
-    "stability-flags": {
-        "unl/php-dwt-parser": 5,
-        "unl/php-wdn-templates": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

@@ -4,22 +4,12 @@
             "type": "pear",
             "url": "http://pear.unl.edu",
             "vendor-alias": "pear-unl"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/unl/phpunltemplates.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/unl/phpdwtparser.git"
         }
     ],
     "require": {
-        "unl/php-dwt-parser": "1.0.0-rc.2",
         "pear-unl/UNL_Cache_Lite" : "*",
-        "unl/php-wdn-templates": "dev-master"
+        "unl/php-wdn-templates": "^4.1"
     },
     
-    "minimum-stability": "RC",
     "prefer-stable": true
 }
