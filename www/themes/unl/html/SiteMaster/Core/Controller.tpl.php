@@ -6,9 +6,12 @@ $page = Templates::factory('Fixed', Templates::VERSION_4_1);
 $url     = \SiteMaster\Core\Config::get('URL');
 $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
+//Titles
 $page->doctitle     = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
 $page->titlegraphic = $site_title;
 $page->pagetitle     = '<h1>' . $context->output->getPageTitle() . '</h1>';
+
+//Navigation
 $page->breadcrumbs  = '
 <ul>
     <li><a href="http://www.unl.edu/">UNL</a></li>
@@ -17,6 +20,14 @@ $page->breadcrumbs  = '
 </ul>
 ';
 
+$mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
+    \SiteMaster\Core\Events\Navigation\MainCompile::EVENT_NAME,
+    new \SiteMaster\Core\Events\Navigation\MainCompile()
+);
+
+$page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
+
+//Head
 $page->addScriptDeclaration('
     require(["idm"], function(idm) {
       WDN.setPluginParam("idm", "login", "' . $url . 'auth/unl/");
@@ -42,13 +53,8 @@ foreach ($style_sheets_event->getStyleSheets() as $url=>$media) {
     $page->addStyleSheet($url, $media);
 }
 
-$mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
-    \SiteMaster\Core\Events\Navigation\MainCompile::EVENT_NAME,
-    new \SiteMaster\Core\Events\Navigation\MainCompile()
-);
 
-$page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
-
+//Main Content
 $page->maincontentarea = '';
 
 $page->maincontentarea .= '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
@@ -79,7 +85,7 @@ foreach ($prepend->getPrepend() as $item) {
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
+//Footer
 $page->leftcollinks = $savvy->render($context, 'SiteMaster/Core/localfooter.tpl.php');
-
 
 echo $page;
