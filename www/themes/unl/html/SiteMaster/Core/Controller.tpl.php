@@ -7,9 +7,10 @@ $url     = \SiteMaster\Core\Config::get('URL');
 $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
 //Titles
-$page->doctitle     = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
+$page->doctitle = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
 $page->titlegraphic = $site_title;
-$page->pagetitle     = '<h1>' . $context->output->getPageTitle() . '</h1>';
+$page->pagetitle = '<h1>' . $context->output->getPageTitle() . '</h1>';
+$page->affiliation = '';
 
 //Navigation
 $page->breadcrumbs  = '
