@@ -8,7 +8,6 @@ $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
 $page->doctitle     = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
 $page->titlegraphic = $site_title;
-$page->affiliation = 'UNL';
 $page->pagetitle     = '<h1>' . $context->output->getPageTitle() . '</h1>';
 $page->breadcrumbs  = '
 <ul>
