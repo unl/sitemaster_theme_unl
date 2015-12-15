@@ -49,13 +49,7 @@ $mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
 
 $page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
 
-$page->maincontentarea = '<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(["_setAccount", "UA-3203435-18"]); //replace with your unique tracker id
-_gaq.push(["_setDomainName", ".unl.edu"]);
-_gaq.push(["_setAllowLinker", true]);
-_gaq.push(["_trackPageview"]);
-</script>';
+$page->maincontentarea = '';
 
 $page->maincontentarea .= '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
 foreach ($app->getFlashBagMessages() as $message) {
@@ -85,13 +79,7 @@ foreach ($prepend->getPrepend() as $item) {
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
-$page->leftcollinks = '
-<span role="heading" class="wdn-footer-heading">Related Links</span>
-<ul>
-<li><a href="http://wdn.unl.edu/">Web Developer Network</a></li>
-<li><a href="http://iim.unl.edu/">Internet and Interactive Media</a></li>
-<li><a href="http://ucomm.unl.edu/">University Communications</a></li>
-<li><a href="http://its.unl.edu/">Information Technology Services</a></li>
-</ul>';
+$page->leftcollinks = $savvy->render($context, 'SiteMaster/Core/localfooter.tpl.php');
+
 
 echo $page;
