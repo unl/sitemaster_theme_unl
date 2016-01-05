@@ -1,39 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "267bf188d243985e8de1a5491f4655fe",
+    "hash": "bc4f8019ca3551d69a67c94df7216260",
     "packages": [
-        {
-            "name": "UNL/PHPUNLTemplates",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unl/phpunltemplates.git",
-                "reference": "953dc4aba884fdd118a79d1d772da9a987c34c3e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/953dc4aba884fdd118a79d1d772da9a987c34c3e",
-                "reference": "953dc4aba884fdd118a79d1d772da9a987c34c3e",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "UNL_Templates": "src/"
-                }
-            },
-            "include-path": [
-                "src"
-            ],
-            "support": {
-                "source": "https://github.com/unl/phpunltemplates/tree/master",
-                "issues": "https://github.com/unl/phpunltemplates/issues"
-            },
-            "time": "2014-05-05 14:12:58"
-        },
         {
             "name": "pear-pear.unl.edu/UNL_Cache_Lite",
             "version": "0.1.0",
@@ -61,49 +33,379 @@
             "description": "This is a port of the Cache_Lite package from PEAR, with support for PHP 5 and\nexceptions.\nThis package is a little cache system optimized for file containers. It is fast\nand safe (because it uses file locking and/or anti-corruption tests)."
         },
         {
-            "name": "pear-pear.unl.edu/UNL_DWT",
-            "version": "0.9.0",
+            "name": "unl/php-dwt-parser",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unl/phpdwtparser.git",
+                "reference": "0b49f94c19fb21299fe768ada2ac64989b7c6fbb"
+            },
             "dist": {
-                "type": "file",
-                "url": "http://pear.unl.edu/get/UNL_DWT-0.9.0.tgz",
-                "reference": null,
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/unl/phpdwtparser/zipball/0b49f94c19fb21299fe768ada2ac64989b7c6fbb",
+                "reference": "0b49f94c19fb21299fe768ada2ac64989b7c6fbb",
+                "shasum": ""
             },
             "require": {
-                "php": ">=5.0.0.0"
+                "php": ">=5.5",
+                "zaininnari/html-minifier": "*",
+                "zendframework/zend-code": "^2.5"
             },
-            "conflict": {
-                "pear-pear.unl.edu/unl_templates": "<=0.5.2.0"
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
             },
-            "replace": {
-                "pear-unl/unl_dwt": "== 0.9.0.0"
-            },
-            "type": "pear-library",
-            "autoload": {
-                "classmap": [
-                    ""
-                ]
-            },
-            "include-path": [
-                "/"
+            "bin": [
+                "bin/createTemplates.php"
             ],
-            "description": "\nThis package generates php class files (objects) from Dreamweaver template files.\n"
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UNL\\DWT\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Abel (kabel)",
+                    "email": "kabel2@unl.edu",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Brett Bieber (saltybeagle)",
+                    "email": "brett.bieber@gmail.com",
+                    "role": "Retired Developer"
+                }
+            ],
+            "description": "A PHP library for parsing DWT files and turning them into PHP classes",
+            "homepage": "http://wdn.unl.edu/",
+            "time": "2015-12-14 23:51:40"
+        },
+        {
+            "name": "unl/php-wdn-templates",
+            "version": "v4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unl/phpunltemplates.git",
+                "reference": "ddece80fce8611c22fa674a0f36eac3ddf4ca423"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/ddece80fce8611c22fa674a0f36eac3ddf4ca423",
+                "reference": "ddece80fce8611c22fa674a0f36eac3ddf4ca423",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "unl/php-dwt-parser": "1.0.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "^0.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "UNL\\Templates\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Abel (kabel)",
+                    "email": "kabel2@unl.edu",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Brett Bieber (saltybeagle)",
+                    "email": "brett.bieber@gmail.com",
+                    "role": "Retired Developer"
+                },
+                {
+                    "name": "Ned Hummel (nhummel2)",
+                    "email": "nhummel2@math.unl.edu",
+                    "role": "Retired Developer"
+                }
+            ],
+            "description": "A PHP library for rendering the UNL templates",
+            "homepage": "http://wdn.unl.edu/",
+            "time": "2015-12-15 00:14:04"
+        },
+        {
+            "name": "zaininnari/html-minifier",
+            "version": "0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zaininnari/html-minifier.git",
+                "reference": "5b94d85705626f9bb33b7c667bc4400088ed4ece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zaininnari/html-minifier/zipball/5b94d85705626f9bb33b7c667bc4400088ed4ece",
+                "reference": "5b94d85705626f9bb33b7c667bc4400088ed4ece",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "zz": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "The BSD 3-Clause License"
+            ],
+            "authors": [
+                {
+                    "name": "Google inc",
+                    "homepage": "http://www.chromium.org/blink",
+                    "role": "Author"
+                },
+                {
+                    "name": "zaininnari",
+                    "homepage": "https://github.com/zaininnari/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The Blink HTMLTokenizer ported to PHP.",
+            "homepage": "https://github.com/zaininnari/html-minifier",
+            "keywords": [
+                "Blink",
+                "HTML minify",
+                "php"
+            ],
+            "time": "2015-08-18 14:10:55"
+        },
+        {
+            "name": "zendframework/zend-code",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-code.git",
+                "reference": "f6c2713c9c5628ccce62d5db3a129c7066af06df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/f6c2713c9c5628ccce62d5db3a129c7066af06df",
+                "reference": "f6c2713c9c5628ccce62d5db3a129c7066af06df",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "zendframework/zend-eventmanager": "^2.6|^3.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-stdlib": "~2.7"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev",
+                    "dev-develop": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Code\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "homepage": "https://github.com/zendframework/zend-code",
+            "keywords": [
+                "code",
+                "zf2"
+            ],
+            "time": "2015-11-24 15:49:25"
+        },
+        {
+            "name": "zendframework/zend-eventmanager",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-eventmanager.git",
+                "reference": "a03de810b99b0302059ab744c535d464b8dc4721"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/a03de810b99b0302059ab744c535d464b8dc4721",
+                "reference": "a03de810b99b0302059ab744c535d464b8dc4721",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "zendframework/zend-stdlib": "~2.5"
+            },
+            "require-dev": {
+                "athletic/athletic": "dev-master",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev",
+                    "dev-develop": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\EventManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-eventmanager",
+            "keywords": [
+                "eventmanager",
+                "zf2"
+            ],
+            "time": "2015-10-06 11:53:40"
+        },
+        {
+            "name": "zendframework/zend-hydrator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-hydrator.git",
+                "reference": "f3ed8b833355140350bbed98d8a7b8b66875903f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/f3ed8b833355140350bbed98d8a7b8b66875903f",
+                "reference": "f3ed8b833355140350bbed98d8a7b8b66875903f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "zendframework/zend-stdlib": "^2.5.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "^2.0@dev",
+                "zendframework/zend-eventmanager": "^2.5.1",
+                "zendframework/zend-filter": "^2.5.1",
+                "zendframework/zend-inputfilter": "^2.5.1",
+                "zendframework/zend-serializer": "^2.5.1",
+                "zendframework/zend-servicemanager": "^2.5.1"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "^2.5.1, to support aggregate hydrator usage",
+                "zendframework/zend-filter": "^2.5.1, to support naming strategy hydrator usage",
+                "zendframework/zend-serializer": "^2.5.1, to use the SerializableStrategy",
+                "zendframework/zend-servicemanager": "^2.5.1, to support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Hydrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-hydrator",
+            "keywords": [
+                "hydrator",
+                "zf2"
+            ],
+            "time": "2015-09-17 14:06:43"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "2.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "cae029346a33663b998507f94962eb27de060683"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/cae029346a33663b998507f94962eb27de060683",
+                "reference": "cae029346a33663b998507f94962eb27de060683",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "zendframework/zend-hydrator": "~1.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-config": "~2.5",
+                "zendframework/zend-eventmanager": "~2.5",
+                "zendframework/zend-filter": "~2.5",
+                "zendframework/zend-inputfilter": "~2.5",
+                "zendframework/zend-serializer": "~2.5",
+                "zendframework/zend-servicemanager": "~2.5"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
+                "zendframework/zend-filter": "To support naming strategy hydrator usage",
+                "zendframework/zend-serializer": "Zend\\Serializer component",
+                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev",
+                    "dev-develop": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Stdlib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-stdlib",
+            "keywords": [
+                "stdlib",
+                "zf2"
+            ],
+            "time": "2015-10-15 15:57:32"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "unl/phpunltemplates": 20
-    },
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
 }

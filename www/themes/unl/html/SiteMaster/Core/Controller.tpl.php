@@ -1,22 +1,40 @@
 <?php
-\UNL_Templates::$options['version']        = 4.0;
-\UNL_Templates::$options['sharedcodepath'] = dirname(__FILE__).'/sharedcode';
+use UNL\Templates\Templates;
+
+$page = Templates::factory('Fixed', Templates::VERSION_4_1);
+
+$wdn_include_path = \SiteMaster\Core\Util::getRootDir();
+if (file_exists($wdn_include_path . '/wdn/templates_4.1')) {
+    $page->setLocalIncludePath($wdn_include_path);
+}
+
 
 $url     = \SiteMaster\Core\Config::get('URL');
 $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
-$page    = UNL_Templates::factory('Fixed');
-
-$page->doctitle     = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
+//Titles
+$page->doctitle = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
 $page->titlegraphic = $site_title;
-$page->pagetitle     = '<h1>' . $context->output->getPageTitle() . '</h1>';
+$page->pagetitle = '<h1>' . $context->output->getPageTitle() . '</h1>';
+$page->affiliation = '';
+
+//Navigation
 $page->breadcrumbs  = '
 <ul>
     <li><a href="http://www.unl.edu/">UNL</a></li>
-    <li>' . $site_title . '</li>
+    <li><a href="' . $url . '">' . $site_title . '</a></li>
+    <li>' . $context->output->getPageTitle() . '</li>
 </ul>
 ';
 
+$mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
+    \SiteMaster\Core\Events\Navigation\MainCompile::EVENT_NAME,
+    new \SiteMaster\Core\Events\Navigation\MainCompile()
+);
+
+$page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
+
+//Head
 $page->addScriptDeclaration('
     require(["idm"], function(idm) {
       WDN.setPluginParam("idm", "login", "' . $url . 'auth/unl/");
@@ -42,22 +60,9 @@ foreach ($style_sheets_event->getStyleSheets() as $url=>$media) {
     $page->addStyleSheet($url, $media);
 }
 
-$mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
-    \SiteMaster\Core\Events\Navigation\MainCompile::EVENT_NAME,
-    new \SiteMaster\Core\Events\Navigation\MainCompile()
-);
 
-$page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
-
-$page->loadSharedCodeFiles();
-
-$page->maincontentarea = '<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(["_setAccount", "UA-3203435-18"]); //replace with your unique tracker id
-_gaq.push(["_setDomainName", ".unl.edu"]);
-_gaq.push(["_setAllowLinker", true]);
-_gaq.push(["_trackPageview"]);
-</script>';
+//Main Content
+$page->maincontentarea = '';
 
 $page->maincontentarea .= '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
 foreach ($app->getFlashBagMessages() as $message) {
@@ -87,13 +92,7 @@ foreach ($prepend->getPrepend() as $item) {
 $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div>';
 
-$page->leftcollinks = '
-<h3>Related Links</h3>
-<ul>
-<li><a href="http://wdn.unl.edu/">Web Developer Network</a></li>
-<li><a href="http://iim.unl.edu/">Internet and Interactive Media</a></li>
-<li><a href="http://ucomm.unl.edu/">University Communications</a></li>
-<li><a href="http://its.unl.edu/">Information Technology Services</a></li>
-</ul>';
+//Footer
+$page->leftcollinks = $savvy->render($context, 'SiteMaster/Core/localfooter.tpl.php');
 
 echo $page;
