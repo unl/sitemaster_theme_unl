@@ -1,7 +1,7 @@
 <div class="wdn-grid-set wdn-footer-links-local">
     <div class="bp960-wdn-col-two-thirds">
         <div class="wdn-footer-module">
-            <span role="heading" class="wdn-footer-heading">About UNL MediaHub</span>
+            <span role="heading" class="wdn-footer-heading">About UNL WebAudit</span>
             <?php
             if ($file = @file_get_contents(\SiteMaster\Core\Util::getRootDir() . '/tmp/iim-app-footer.html')) {
                 echo $file;
