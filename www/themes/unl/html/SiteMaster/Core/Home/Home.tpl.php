@@ -8,7 +8,12 @@
         <a href="<?php echo $base_url ?>auth/unl/" class="wdn-button">My sites</a>
     <?php endif; ?>
     <a href="<?php echo $base_url ?>registry/" class="wdn-button">Find a site</a>
-    <a href="<?php echo $base_url ?>sites/add/" class="wdn-button">Add a site</a>
+    <?php if ($user): ?>
+        <a href="<?php echo $base_url ?>sites/add/" class="wdn-button">Add a site</a>
+    <?php else: ?>
+        <a href="<?php echo $base_url ?>auth/unl/?r=<?php echo urlencode($base_url . 'sites/add/') ?>" class="wdn-button">Add a site</a>
+    <?php endif; ?>
+    
 </p>
 <h2>Why Audit?</h2>
 <div class="wdn-grid-set">
