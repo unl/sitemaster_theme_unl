@@ -24,19 +24,19 @@
                 TO ENSURE DEVICE COMPATIBILITY.
             </dt>
             <dd>
-                By maintaining high compliance to international standards for code validity, UNLedu is usable on all modern, standards-compliant browsers. By moving sites to responsive frameworks, we gain full fidelity on mobile devices.
+                By maintaining high compliance to international standards for code validity, unl.edu is usable on all modern, standards-compliant browsers.
             </dd>
             <dt>
                 TO DO THE RIGHT THING.
             </dt>
             <dd>
-                The UNLedu Web Framework, as delivered to developers, is in compliance with current web accessibility standards and laws, and incorporates some technologies that provide additional benefit to persons using assistive technologies. The framework also incorporates integrations with UNL’s single sign-on service for authentication.
+                The UNLedu Web Framework, as delivered to developers, is in compliance with current web accessibility standards and laws, and incorporates some technologies that provide additional benefit to persons using assistive technologies. The framework also incorporates integrations with UNL’s single sign-on service for authentication. By ensuring that your sites meet these international standards and laws, you will ensure that everyone has equal access to the information and services you provide.
             </dd>
             <dt>
-                TO MAKE IT AWESOME.
+                TO MAKE WEBSITES AWESOME
             </dt>
             <dd>
-                The UNLedu Web Framework is much more than a template, or a set of design instructions. Today it's an aggregation of best ideas for design and computing from across the university, incorporating authentication, emergency notification, constituent chat and other features. As it continues to evolve, along with the web, its relevance and its ability to serve our users is limited only by our collective imaginations.
+                By using WebAudit, you will ensure that your site is of the highest quality. You will be notified when problems that could frustrate visitors arise.
             </dd>
         </dl>
     </div>
