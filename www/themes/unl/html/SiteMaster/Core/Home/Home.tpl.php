@@ -1,5 +1,14 @@
 <p>
-    UNLwebaudit helps you maintain your site by running automatic audits to find potential problems with HTML markup, accessibility, UNL web standards and broken links.  It also provides a <a href="<?php echo $base_url . 'registry/' ?>">registry</a> of sites at UNL, which can be used as a WHOIS service or as a source of role assignments that can be used by other systems like <a href="http://ucommchat.unl.edu/">UNLchat</a>.  
+    UNLwebaudit helps you maintain your site by running automatic audits to find potential problems with HTML markup, accessibility, UNL web standards and broken links.  It also provides a <a href="<?php echo $base_url . 'registry/' ?>">registry</a> of sites at UNL, which can be used as a WHOIS service or as a source of role assignments that can be used by other systems like <a href="http://ucommchat.unl.edu/">UNLchat</a>.
+</p>
+<p>
+    <?php if ($user): ?>
+        <a href="<?php echo $user->getURL() ?>" class="wdn-button">My sites</a>
+    <?php else: ?>
+        <a href="<?php echo $base_url ?>auth/unl/" class="wdn-button">My sites</a>
+    <?php endif; ?>
+    <a href="<?php echo $base_url ?>registry/" class="wdn-button">Find a site</a>
+    <a href="<?php echo $base_url ?>sites/add/" class="wdn-button">Add a site</a>
 </p>
 <h2>Why Audit?</h2>
 <div class="wdn-grid-set">
