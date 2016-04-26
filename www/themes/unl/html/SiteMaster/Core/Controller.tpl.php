@@ -62,7 +62,7 @@ foreach ($style_sheets_event->getStyleSheets() as $url=>$media) {
 
 
 //Main Content
-$page->maincontentarea = '';
+$page->maincontentarea = '<div class="wdn-band"><div class="wdn-inner-wrapper">';
 
 $page->maincontentarea .= '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
 foreach ($app->getFlashBagMessages() as $message) {
@@ -90,7 +90,7 @@ foreach ($prepend->getPrepend() as $item) {
     $page->maincontentarea .= $savvy->render($item);
 }
 $page->maincontentarea .= $savvy->render($context->output);
-$page->maincontentarea .= '</div>';
+$page->maincontentarea .= '</div></div></div>';
 
 //Footer
 $page->leftcollinks = $savvy->render($context, 'SiteMaster/Core/localfooter.tpl.php');
