@@ -20,8 +20,8 @@
             <ul class="wdn-related-links-v1">
                 <li><a href="http://wdn.unl.edu/">Web Developer Network</a></li>
                 <li><a href="http://iim.unl.edu/">Internet and Interactive Media</a></li>
-                <li><a href="http://ucomm.unl.edu/">University Communications</a></li>
-                <li><a href="http://its.unl.edu/">Information Technology Services</a></li>
+                <li><a href="http://wdn.unl.edu/documentation/unl-webaudit">Documentation</a></li>
+                <li><a href="http://wdn.unl.edu/documentation/unl-webaudit/changelog">Changelog</a></li>
             </ul>
         </div>
     </div>
