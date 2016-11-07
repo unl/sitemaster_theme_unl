@@ -25,6 +25,14 @@ $metric_grades = $context->page->getMetricGrades();
                 <ul>
                     <li><span class="scan-status">Status: <?php echo $context->page->status ?></span></li>
                     <li><span class="scanned-date">Scanned on: <?php echo $context->page->start_time ?></span></li>
+                    <?php
+                    if ($context->page->end_time) {
+                        $start_date = new DateTime($context->page->start_time);
+                        $end_date = new DateTime($context->page->end_time);
+                        $dd = date_diff($end_date, $start_date);
+                        echo '<li>Duration: '.$dd->format('%H:%I:%S') . '</li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <div>
