@@ -21,7 +21,7 @@ $page->affiliation = '';
 //Navigation
 $page->breadcrumbs  = '
 <ul>
-    <li><a href="http://www.unl.edu/">UNL</a></li>
+    <li><a href="http://www.unl.edu/">Nebraska</a></li>
     <li><a href="' . $url . '">' . $site_title . '</a></li>
     <li>' . $context->output->getPageTitle() . '</li>
 </ul>
