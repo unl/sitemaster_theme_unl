@@ -2,13 +2,7 @@
     <div class="bp960-wdn-col-two-thirds">
         <div class="wdn-footer-module">
             <span role="heading" class="wdn-footer-heading">About UNL WebAudit</span>
-            <?php
-            if ($file = @file_get_contents(\SiteMaster\Core\Util::getRootDir() . '/tmp/iim-app-footer.html')) {
-                echo $file;
-            } else {
-                echo file_get_contents('http://iim.unl.edu/iim-app-footer?format=partial');
-            }
-            ?>
+            <p>This application is developed and maintained by <a href="http://iim.unl.edu/">Internet and Interactive Media</a> (IIM), which is a partnership with University Communication and Information Technology Services.</p>
             <p>
                 UNL WebAudit is administrated by the <a href="http://wdn.unl.edu/wdn-shared-governance-board-0">WDN Governance Board</a>.
             </p>
