@@ -13,8 +13,14 @@
     <?php else: ?>
         <a href="<?php echo $base_url ?>auth/unl/?r=<?php echo urlencode($base_url . 'sites/add/') ?>" class="wdn-button">Add a site</a>
     <?php endif; ?>
-    
 </p>
+
+<?php if (!$user): ?>
+    <p>
+        <a href="<?php echo $base_url ?>auth/shib/" class="wdn-button">Log in from a different institution</a>
+    </p>
+<?php endif ?>
+
 <h2>Why Audit?</h2>
 <div class="wdn-grid-set">
     <div class="bp1-wdn-col-two-thirds">

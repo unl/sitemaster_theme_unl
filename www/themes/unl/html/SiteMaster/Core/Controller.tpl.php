@@ -35,12 +35,31 @@ $mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
 $page->navlinks = '<ul>' . $savvy->render($mainNav) . '</ul>';
 
 //Head
-$page->addScriptDeclaration('
-    require(["idm"], function(idm) {
-      WDN.setPluginParam("idm", "login", "' . $url . 'auth/unl/");
-      WDN.setPluginParam("idm", "logout","' . $url . 'auth/unl/logout/");
-    });
-');
+if ($user = \SiteMaster\Core\User\Session::getCurrentUser()) {
+    $plugin = \SiteMaster\Core\User\Session::getCurrentAuthProviderPlugin();
+    $page->addScriptDeclaration('
+        require(["idm"], function(idm) {
+          idm.setLoginURL("' . $plugin->getLoginURL() . '");
+          idm.setLogoutURL("' . $plugin->getLogoutURL(). '");
+        });
+    ');
+    
+    if ($user->provider !== 'unl.edu') {
+        $page->addScriptDeclaration('
+            require(["idm"], function(idm) {
+              idm.displayNotice("'.$user->getName().'");
+            });
+        ');
+    }
+} else {
+    //No one is logged in
+    $page->addScriptDeclaration('
+        require(["idm"], function(idm) {
+          idm.setLoginURL("' . $url . 'auth/unl/");
+          idm.setLogoutURL("' . $url . 'auth/unl/logout/");
+        });
+    ');
+}
 
 $scripts_event = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
     \SiteMaster\Core\Events\Theme\RegisterScripts::EVENT_NAME,
