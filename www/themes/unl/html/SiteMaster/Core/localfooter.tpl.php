@@ -1,10 +1,10 @@
 <div class="wdn-grid-set wdn-footer-links-local">
     <div class="bp960-wdn-col-two-thirds">
         <div class="wdn-footer-module">
-            <span role="heading" class="wdn-footer-heading">About UNL WebAudit</span>
+            <span role="heading" class="wdn-footer-heading">About Web Audit</span>
             <p>This application is developed and maintained by <a href="http://iim.unl.edu/">Internet and Interactive Media</a> (IIM), which is a partnership with University Communication and Information Technology Services.</p>
             <p>
-                UNL WebAudit is administrated by the <a href="http://wdn.unl.edu/wdn-shared-governance-board-0">WDN Governance Board</a>.
+                Web Audit is administrated by the <a href="http://wdn.unl.edu/wdn-shared-governance-board-0">WDN Governance Board</a>.
             </p>
         </div>
     </div>
