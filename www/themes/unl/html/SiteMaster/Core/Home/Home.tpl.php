@@ -1,5 +1,5 @@
 <p>
-    Web Audit helps you maintain your site by running automatic audits. We also provides a <a href="<?php echo $base_url . 'registry/' ?>">registry</a> of sites, which can be used as a WHOIS service or as a source of role assignments that can be used by other systems like <a href="http://ucommchat.unl.edu/">UNLchat</a>.
+    Web Audit helps you maintain your site by running automatic audits that help you find and fix problems that affect user experience. We also provides a <a href="<?php echo $base_url . 'registry/' ?>">registry</a> of sites, which can be used as a WHOIS service or as a source of role assignments that can be used by other systems like <a href="http://ucommchat.unl.edu/">UNLchat</a>.
 </p>
 <p>
     <?php if ($user): ?>
