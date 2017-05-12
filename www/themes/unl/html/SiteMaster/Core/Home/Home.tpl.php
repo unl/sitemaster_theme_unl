@@ -18,6 +18,8 @@
 <?php if (!$user): ?>
     <p>
         <a href="<?php echo $base_url ?>auth/shib/" class="wdn-button">Log in from a different institution</a>
+        or
+        <a href="<?php echo $base_url ?>auth/google/" class="wdn-button">Log in with Google</a>
     </p>
 <?php endif ?>
 
