@@ -8,6 +8,7 @@
             <label for="support_email">Support Email Address</label>
             <input type="email" id="support_email" name="support_email" multiple value="<?php echo $context->site->support_email ?>" />
         </li>
+        <?php if ('unl' === $context->site->group_name): ?>
         <li>
             <label for="support_groups">mysupport.unl.edu assignments for this site (separated by spaces and quoted if the team name includes spaces).</label>
             <input type="text" id="support_groups" name="support_groups" multiple value="<?php echo $context->site->support_groups ?>" />
@@ -17,6 +18,7 @@
                 </p>
             </div>
         </li>
+        <?php endif; ?>
         <li>
             <label for="site_map_url">Absolute URL to the site map for your site</label>
             <input type="url" id="site_map_url" name="site_map_url" value="<?php echo $context->site->site_map_url ?>" />
