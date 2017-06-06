@@ -32,6 +32,7 @@
     <li>Accessibility via <a href="https://github.com/dequelabs/axe-core">aXe core</a></li>
     <li>Performance testing via <a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Insights</a></li>
     <li>SEO auditing</li>
+    <li>Spelling (beta)</li>
 </ul>
 
 <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:mfairchild@unl.edu">e-mail us</a>.</p>
