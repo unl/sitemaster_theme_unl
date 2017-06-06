@@ -12,6 +12,7 @@
         <div class="wdn-footer-module">
             <span role="heading" class="wdn-footer-heading">Related Links</span>
             <ul class="wdn-related-links-v1">
+                <li><a href="<?php echo \SiteMaster\Core\Config::get('URL') ?>terms-of-use/">Terms Of Use</a></li>
                 <li><a href="http://wdn.unl.edu/">Web Developer Network</a></li>
                 <li><a href="http://iim.unl.edu/">Internet and Interactive Media</a></li>
                 <li><a href="http://wdn.unl.edu/documentation/unl-webaudit">Documentation</a></li>
