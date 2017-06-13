@@ -23,20 +23,42 @@
     </p>
 <?php endif ?>
 
-<h2>We are open for business!</h2>
-<p>Web Audit now supports federated login! If your institution participates in <a href="https://www.incommon.org/">InCommon</a> you can use Web Audit to start improving your sites! You can scan up to <?php echo \SiteMaster\Core\Config::getForGroup('default', 'SCAN_PAGE_LIMIT') ?> pages per site and you will have access to the following metrics.</p>
+<div class="wdn-grid-set">
+    <div class="wdn-col-one-half">
+        <h2>We are open for business!</h2>
+        <p>Web Audit now supports federated login! If your institution participates in <a href="https://www.incommon.org/">InCommon</a> you can use Web Audit to start improving your sites! You can scan up to <?php echo \SiteMaster\Core\Config::getForGroup('default', 'SCAN_PAGE_LIMIT') ?> pages per site and you will have access to the following metrics.</p>
 
-<ul>
-    <li>HTML Validation via the <a href="https://validator.w3.org/">w3c validator</a></li>
-    <li>Broken link scanning</li>
-    <li>Accessibility via <a href="https://github.com/dequelabs/axe-core">aXe core</a></li>
-    <li>Performance testing via <a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Insights</a></li>
-    <li>SEO auditing</li>
-    <li>Spelling (beta)</li>
-</ul>
+        <ul>
+            <li>HTML Validation via the <a href="https://validator.w3.org/">w3c validator</a></li>
+            <li>Broken link scanning</li>
+            <li>Accessibility via <a href="https://github.com/dequelabs/axe-core">aXe core</a></li>
+            <li>Performance testing via <a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Insights</a></li>
+            <li>SEO auditing</li>
+            <li>Spelling (beta)</li>
+        </ul>
 
-<p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:mfairchild@unl.edu">e-mail us</a>.</p>
-
+        <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:mfairchild@unl.edu">e-mail us</a>.</p>
+    </div>
+    <div class="wdn-col-one-half">
+        <h2>Features</h2>
+        <dl>
+            <dt>Audit your site against these metrics</dt>
+            <dd>Link checking, accessibility, PageSpeed Insights, Spelling, SEO, and HTML Validation.</dd>
+            <dt>Groups</dt>
+            <dd>Custom groups can be defined for your sites, which allows for custom plugins, metrics, and configuration.</dd>
+            <dt>Headless browser testing</dt>
+            <dd>Our metrics use a headless browser so that modifications to the dom via JavaScript and CSS are accounted for.</dd>
+            <dt>Registry</dt>
+            <dd>In large organizations, it can be easy to lose track of who works on what. The registry allows assigning users with specific roles to each site, as well as an API so that other systems can integrate with it.</dd>
+            <dt>Overrides</dt>
+            <dd>Sometimes a notice or error is not actually a problem. We let you override them so they don't appear in future scans.</dd>
+            <dt>Monthly scans</dt>
+            <dd>Your sites are automatically scanned once a month, and you will receive an email if anything has changed. You can also see changes over time for each metric.</dd>
+            <dt>Feature analytics</dt>
+            <dd>As we scan your sites we collect data on classes and HTML elements that were found. This allows you to be informed about what is being used on your sites.</dd>
+        </dl>
+    </div>
+</div>
 
 <h2>Why Audit?</h2>
 <div class="wdn-grid-set">
