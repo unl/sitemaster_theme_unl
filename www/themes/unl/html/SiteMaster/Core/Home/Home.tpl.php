@@ -24,7 +24,7 @@
 <?php endif ?>
 
 <div class="wdn-grid-set">
-    <div class="wdn-col-one-half">
+    <div class="bp960-wdn-col-one-half">
         <h2>We are open for business!</h2>
         <p>Web Audit now supports federated login! If your institution participates in <a href="https://www.incommon.org/">InCommon</a> you can use Web Audit to start improving your sites! You can scan up to <?php echo \SiteMaster\Core\Config::getForGroup('default', 'SCAN_PAGE_LIMIT') ?> pages per site and you will have access to the following metrics.</p>
 
@@ -39,7 +39,7 @@
 
         <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:mfairchild@unl.edu">e-mail us</a>.</p>
     </div>
-    <div class="wdn-col-one-half">
+    <div class="bp960-wdn-col-one-half">
         <h2>Features</h2>
         <dl>
             <dt>Audit your site against these metrics</dt>
