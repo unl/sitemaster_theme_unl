@@ -47,7 +47,7 @@ if ($user = \SiteMaster\Core\User\Session::getCurrentUser()) {
     if ($plugin->getProviderMachineName() !== 'unl.edu') {
         $page->addScriptDeclaration('
             require(["idm"], function(idm) {
-              idm.displayNotice("'.$user->getName().'");
+              idm.displayNotice("'.$user->getName(true).'");
             });
         ');
     }
