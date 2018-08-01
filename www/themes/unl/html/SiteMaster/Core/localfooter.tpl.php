@@ -4,7 +4,7 @@
             <span role="heading" class="wdn-footer-heading">About Web Audit</span>
             <p>This application is a product of the <a href="https://iim.unl.edu/">Internet and Interactive Media group at Nebraska</a>. IIM is a partnership of <a href="https://ucomm.unl.edu/">University Communication</a> and <a href="https://its.unl.edu/">Information Technology Services</a>.</p>
             <p>
-                Web Audit is administrated by the <a href="http://wdn.unl.edu/wdn-shared-governance-board-0">WDN Governance Board</a>.
+                Web Audit is administrated by the <a href="https://wdn.unl.edu/shared-governance-board">WDN Governance Board</a>.
             </p>
         </div>
     </div>
