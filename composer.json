@@ -1,15 +1,13 @@
 {
     "repositories": [
         {
-            "type": "pear",
-            "url": "http://pear.unl.edu",
-            "vendor-alias": "pear-unl"
+            "type": "vcs",
+            "url": "https://github.com/unlpear/UNL_Cache_Lite.git"
         }
     ],
     "require": {
-        "pear-unl/UNL_Cache_Lite" : "*",
+        "unl/unl_cache_lite" : "*",
         "unl/php-wdn-templates": "^4.1"
     },
-    
     "prefer-stable": true
 }
