@@ -11,7 +11,9 @@ Modify `config.inc.php` to set the UNL theme:
 
 add a line to the PLUGINS config for the `theme_unl` plugin you just cloned.
 
-`'theme_unl' => array(),`
+`'theme_unl' => [],`
 
 Then, install the plugin by running `php scripts/install.php` which will install any dependencies and add
 it to the list of installed plugins.
+
+To get the latest version of the framework includes, you will need to follow the [instructions to sync the UNLedu Framework](https://wdn.unl.edu/documentation/synchronizing-unledu-web-framework).
