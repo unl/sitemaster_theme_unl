@@ -1,10 +1,10 @@
 <?php
 use UNL\Templates\Templates;
 
-$page = Templates::factory('Fixed', Templates::VERSION_4_1);
+$page = Templates::factory('Fixed', Templates::VERSION_5);
 
 $wdn_include_path = \SiteMaster\Core\Util::getRootDir();
-if (file_exists($wdn_include_path . '/wdn/templates_4.1')) {
+if (file_exists($wdn_include_path . '/wdn/templates_5.0')) {
     $page->setLocalIncludePath($wdn_include_path);
 }
 
@@ -20,11 +20,11 @@ $page->affiliation = '';
 
 //Navigation
 $page->breadcrumbs  = '
-<ul>
+<ol>
     <li><a href="http://www.unl.edu/">Nebraska</a></li>
     <li><a href="' . $url . '">' . $site_title . '</a></li>
     <li>' . $context->output->getPageTitle() . '</li>
-</ul>
+</ol>
 ';
 
 $mainNav = \SiteMaster\Core\Plugin\PluginManager::getManager()->dispatchEvent(
@@ -43,7 +43,9 @@ if ($user = \SiteMaster\Core\User\Session::getCurrentUser()) {
           idm.setLogoutURL("' . $plugin->getLogoutURL(). '");
         });
     ');
-    
+
+    // idm.displayNotice not in version 5 of idm
+    /*
     if ($plugin->getProviderMachineName() !== 'unl.edu') {
         $page->addScriptDeclaration('
             require(["idm"], function(idm) {
@@ -51,6 +53,7 @@ if ($user = \SiteMaster\Core\User\Session::getCurrentUser()) {
             });
         ');
     }
+    */
 } else {
     //No one is logged in
     $page->addScriptDeclaration('
@@ -112,6 +115,15 @@ $page->maincontentarea .= $savvy->render($context->output);
 $page->maincontentarea .= '</div></div></div>';
 
 //Footer
-$page->leftcollinks = $savvy->render($context, 'SiteMaster/Core/localfooter.tpl.php');
+$page->contactinfo = $savvy->render($context, 'SiteMaster/Core/localfooter.tpl.php');
+
+$page->addScriptDeclaration(
+    "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-3203435-18', 'auto');
+ga('send', 'pageview');");
 
 echo $page;

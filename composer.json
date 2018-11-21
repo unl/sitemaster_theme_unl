@@ -7,7 +7,7 @@
     ],
     "require": {
         "unl/unl_cache_lite" : "*",
-        "unl/php-wdn-templates": "^4.1"
+        "unl/php-wdn-templates": "^5.0"
     },
     "prefer-stable": true
 }
