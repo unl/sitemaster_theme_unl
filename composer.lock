@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f274913b9349b694ad7f24bb456ff8bf",
+    "content-hash": "178e34ae2e38fcf512b965cee646da17",
     "packages": [
         {
             "name": "unl/php-dwt-parser",
@@ -59,16 +59,16 @@
         },
         {
             "name": "unl/php-wdn-templates",
-            "version": "v4.1.0",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unl/phpunltemplates.git",
-                "reference": "ddece80fce8611c22fa674a0f36eac3ddf4ca423"
+                "reference": "2928e588f409c2628bfeccb5293ab0dd34a506c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/ddece80fce8611c22fa674a0f36eac3ddf4ca423",
-                "reference": "ddece80fce8611c22fa674a0f36eac3ddf4ca423",
+                "url": "https://api.github.com/repos/unl/phpunltemplates/zipball/2928e588f409c2628bfeccb5293ab0dd34a506c5",
+                "reference": "2928e588f409c2628bfeccb5293ab0dd34a506c5",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
             ],
             "description": "A PHP library for rendering the UNL templates",
             "homepage": "http://wdn.unl.edu/",
-            "time": "2015-12-15T00:14:04+00:00"
+            "time": "2018-12-12T16:32:30+00:00"
         },
         {
             "name": "unl/unl_cache_lite",

@@ -15,8 +15,8 @@ $metric_grades = $context->page->getMetricGrades();
     </div>
 </header>
 
-<div class="wdn-grid-set">
-    <div class="bp2-wdn-col-two-sevenths">
+<div class="dcf-grid">
+    <div class="dcf-col-100% dcf-col-33%-start@md">
         <section class="in-page-nav info-section">
             <div>
                 <header>
@@ -52,7 +52,7 @@ $metric_grades = $context->page->getMetricGrades();
         </section>
     </div>
 
-    <div class="bp2-wdn-col-five-sevenths">
+    <div class="dcf-col-100% dcf-col-67%-end@md">
         <?php
         if (!$context->page->isComplete()) {
             ?>
