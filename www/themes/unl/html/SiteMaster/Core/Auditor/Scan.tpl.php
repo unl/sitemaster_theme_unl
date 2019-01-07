@@ -74,8 +74,8 @@ $site_pass_fail = $context->isPassFail();
         }
         ?>
     
-        <div class="wdn-grid-set dashboard-metrics">
-            <div class="bp2-wdn-col-one-fourth">
+        <div class="dcf-grid-full dcf-grid-fourths@md dcf-col-gap-vw dashboard-metrics">
+            <div>
                 <div class="visual-island gpa">
                     <span class="dashboard-value">
                         <?php
@@ -95,7 +95,7 @@ $site_pass_fail = $context->isPassFail();
                     <span class="dashboard-metric"><?php echo $gpa_name ?></span>
                 </div>
             </div>
-            <div class="bp2-wdn-col-one-fourth">
+            <div>
                 <div class="visual-island">
                     <?php
                     $arrow = "&#8596; <span class='secondary'>(same)</span>";
@@ -117,7 +117,7 @@ $site_pass_fail = $context->isPassFail();
                     <div class="dashboard-metric">Compared to Last Scan</div>
                 </div>
             </div>
-            <div class="bp2-wdn-col-one-fourth">
+            <div>
                 <div class="visual-island">
                     <div class="dashboard-value">
                         <?php echo $context->getABSNumberOfChanges()  ?>
@@ -125,7 +125,7 @@ $site_pass_fail = $context->isPassFail();
                     <div class="dashboard-metric">Change(s) Since Last Scan</div>
                 </div>
             </div>
-            <div class="bp2-wdn-col-one-fourth">
+            <div>
                 <div class="visual-island">
                     <span class="dashboard-value"><?php echo $pages->count() ?></span>
                     <span class="dashboard-metric">Pages</span>
@@ -134,8 +134,8 @@ $site_pass_fail = $context->isPassFail();
         </div>
     </section>
     
-    <div class="wdn-grid-set">
-        <div class="bp2-wdn-col-two-sevenths">
+    <div class="dcf-grid dcf-col-gap-vw">
+        <div class="dcf-col-100% dcf-col-33%-start@md">
             <section class="in-page-nav info-section">
                 <header>
                     <h3>Report Navigation</h3>
@@ -148,7 +148,7 @@ $site_pass_fail = $context->isPassFail();
                 </ul>
             </section>
         </div>
-        <div class="bp2-wdn-col-five-sevenths">
+        <div class="dcf-col-100% dcf-col-67%-end@md">
             <section id="changes">
                 <?php
                 if ($previous_scan) {

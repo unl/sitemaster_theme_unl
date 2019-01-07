@@ -84,7 +84,7 @@ foreach ($style_sheets_event->getStyleSheets() as $url=>$media) {
 
 
 //Main Content
-$page->maincontentarea = '<div class="wdn-band"><div class="wdn-inner-wrapper">';
+$page->maincontentarea = '<div class="dcf-bleed"><div class="dcf-wrapper">';
 
 $page->maincontentarea .= '<div class="'.strtolower(str_replace('\\', '_', $context->options['model'])).'">';
 foreach ($app->getFlashBagMessages() as $message) {
