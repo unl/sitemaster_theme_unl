@@ -14,7 +14,7 @@ $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
 //Titles
 $page->doctitle = '<title>' . $site_title . ' | University of Nebraska-Lincoln</title>';
-$page->titlegraphic = '<a class="dcf-txt-h5" href="' . $site_title . '">Directory</a>';
+$page->titlegraphic = '<a class="dcf-txt-h5" href="' . $url . '">' . $site_title . '</a>';
 $page->pagetitle = '<h1>' . $context->output->getPageTitle() . '</h1>';
 $page->affiliation = '';
 
