@@ -126,4 +126,18 @@ $page->addScriptDeclaration(
 ga('create', 'UA-3203435-18', 'auto');
 ga('send', 'pageview');");
 
+// Render any dynamic body src scripts loaded for page
+foreach($savvy->getScripts($savvy::SCRIPT_LOCATION_ANY) as $script) {
+    if ($script instanceof SiteMaster\Core\Script) {
+        $page->addScript($script->url(), $script->type(), $script->appendToHead());
+    }
+}
+
+// Render any dynamic body script declarartions loaded for page
+foreach($savvy->getScriptDeclarations($savvy::SCRIPT_LOCATION_ANY) as $script) {
+    if ($script instanceof SiteMaster\Core\ScriptDeclaration) {
+        $page->addScriptDeclaration($script->content(), $script->type(), $script->appendToHead());
+    }
+}
+
 echo $page;
