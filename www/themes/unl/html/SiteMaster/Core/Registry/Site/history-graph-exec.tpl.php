@@ -1,5 +1,6 @@
-<script>
-    require(['jquery', '<?php echo \SiteMaster\Core\Config::get('URL') . 'www/js/vendor/chart.min.js' ?>'], function($) {
+<?php
+    $savvy->loadScriptDeclaration('
+    require([\'jquery\', \'' . \SiteMaster\Core\Config::get('URL') . 'www/js/vendor/chart.min.js' . '\'], function($) {
         var ctx = document.getElementById("history_chart").getContext("2d");
         var chart = new Chart(ctx).Line(data, {
             responsive: false,
@@ -12,5 +13,5 @@
         });
 
         $("#history_legend").html(chart.generateLegend());
-    });
-</script>
+    });');
+?>
