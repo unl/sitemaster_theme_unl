@@ -37,7 +37,7 @@
             <li>Spelling (beta)</li>
         </ul>
 
-        <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:mfairchild@unl.edu">e-mail us</a>.</p>
+        <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:iim@listserv.unl.edu">e-mail us</a>.</p>
     </div>
     <div>
         <h2>Features</h2>
