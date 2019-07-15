@@ -17,7 +17,7 @@
                 <li style="list-style-type: circle;">Separate multiple assignees by spaces and enclose in single quotes if the assignee includes spaces (i.e. 'ITS Team1' 'ITS Team2' 'ITS Team3').</li>
                 <li style="list-style-type: circle;">First assignee listed will be the primary in support.</li>
                 <li style="list-style-type: circle;">Eight digit NUID must be used for assignments to a user.</li>
-                <li style="list-style-type: circle;">For UNLchat to create tickets in support, the Support Email Address must be set to support.nebraska.edu.</li>
+                <li style="list-style-type: circle;">For UNLchat to create tickets in support, the Support Email Address must be set to support@nebraska.edu.</li>
               </ul>
             </div>
           </li>
