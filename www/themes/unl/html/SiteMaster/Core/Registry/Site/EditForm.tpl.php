@@ -9,15 +9,18 @@
             <input type="email" id="support_email" name="support_email" multiple value="<?php echo $context->site->support_email ?>" />
         </li>
         <?php if ('unl' === $context->site->group_name): ?>
-        <li>
-            <label for="support_groups">mysupport.unl.edu assignments for this site (separated by spaces and quoted if the team name includes spaces).</label>
+          <li>
+            <label for="support_groups">NU Support assignments for this site.</label>
             <input type="text" id="support_groups" name="support_groups" multiple value="<?php echo $context->site->support_groups ?>" />
             <div class="help-text">
-                <p>
-                    Note that for UNLchat to create tickets in mysupport, the Support Email Address must be set to mysupport@unl.edu
-                </p>
+              <ul class="dcf-mt-1">
+                <li style="list-style-type: circle;">Separate multiple assignees by spaces and enclose in single quotes if the assignee includes spaces (i.e. 'ITS Team1' 'ITS Team2' 'ITS Team3').</li>
+                <li style="list-style-type: circle;">First assignee listed will be the primary in support.</li>
+                <li style="list-style-type: circle;">Eight digit NUID must be used for assignments to a user.</li>
+                <li style="list-style-type: circle;">For UNLchat to create tickets in support, the Support Email Address must be set to support@nebraska.edu.</li>
+              </ul>
             </div>
-        </li>
+          </li>
         <?php endif; ?>
         <li>
             <label for="site_map_url">Absolute URL to the site map for your site</label>
