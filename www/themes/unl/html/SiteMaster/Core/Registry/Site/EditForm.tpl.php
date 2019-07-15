@@ -10,7 +10,7 @@
         </li>
         <?php if ('unl' === $context->site->group_name): ?>
           <li>
-            <label for="support_groups">UNL Support assignments for this site.</label>
+            <label for="support_groups">NU Support assignments for this site.</label>
             <input type="text" id="support_groups" name="support_groups" multiple value="<?php echo $context->site->support_groups ?>" />
             <div class="help-text">
               <ul class="dcf-mt-1">
