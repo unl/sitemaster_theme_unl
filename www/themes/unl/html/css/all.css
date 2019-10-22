@@ -1,7 +1,8 @@
-.head-container a:visited, .head-container a {
-    color: #ac0000 !important;
+.head-container a:visited,
+.head-container a {
+  color: #ac0000 !important;
 }
 
 .integration-notes h3 {
-    font-size: 1.75em;
+  font-size: 1.75em;
 }
