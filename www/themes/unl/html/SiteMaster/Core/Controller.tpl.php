@@ -8,7 +8,6 @@ if (file_exists($wdn_include_path . '/wdn/templates_5.0')) {
     $page->setLocalIncludePath($wdn_include_path);
 }
 
-
 $url     = \SiteMaster\Core\Config::get('URL');
 $site_title = \SiteMaster\Core\Config::get('SITE_TITLE');
 
@@ -17,6 +16,9 @@ $page->doctitle = '<title>' . $site_title . ' | University of Nebraska-Lincoln</
 $page->titlegraphic = '<a class="dcf-txt-h5" href="' . $url . '">' . $site_title . '</a>';
 $page->pagetitle = '<h1>' . $context->output->getPageTitle() . '</h1>';
 $page->affiliation = '';
+
+// Add WDN Deprecated Styles
+$page->head .= '<link rel="preload" href="https://unlcms.unl.edu/wdn/templates_5.0/css/deprecated.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"> <noscript><link rel="stylesheet" href="https://unlcms.unl.edu/wdn/templates_5.0/css/deprecated.css"></noscript>';
 
 //Navigation
 $page->breadcrumbs  = '
