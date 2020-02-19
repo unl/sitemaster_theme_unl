@@ -37,8 +37,8 @@
     </div>
 </div>
 <div class="dcf-pt-9 dcf-pb-9">
-    <h2 class="dcf-txt-h3 dcf-mb-2" id="features">Features</h2>
-    <dl class="dcf-columns-auto dcf-mb-0" aria-labelledby="#features">
+    <h2 class="dcf-txt-h3 dcf-mb-2" id="features-heading">Features</h2>
+    <dl class="dcf-columns-auto dcf-mb-0" aria-labelledby="features-heading">
         <dt>Audit your site against these metrics</dt>
         <dd>Link checking, accessibility, PageSpeed Insights, spelling, <abbr class="dcf-txt-sm" title="Search Engine Optimization">SEO</abbr>, and <abbr class="dcf-txt-sm" title="Hypertext Markup Language">HTML</abbr> validation.</dd>
         <dt>Groups</dt>
@@ -56,10 +56,10 @@
     </dl>
 </div>
 <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9 unl-bg-lightest-gray">
-    <h2 class="dcf-txt-h3 dcf-mb-2" id="why-audit">Why audit?</h2>
+    <h2 class="dcf-txt-h3 dcf-mb-2" id="why-audit-heading">Why audit?</h2>
     <div class="dcf-grid dcf-col-gap-vw dcf-row-gap-5">
         <div class="dcf-col-100% dcf-col-67%-start@md">
-            <dl class="dcf-mb-0" aria-labelledby="#why-audit">
+            <dl class="dcf-mb-0" aria-labelledby="why-audit-heading">
                 <dt>To ensure consistent experience</dt>
                 <dd>University of Nebraska&ndash;Lincoln&rsquo;s web quality assurance effort provides developers with information needed to maintain a consistent, high-quality user experience for site visitors.</dd>
                 <dt>To ensure device compatibility</dt>
