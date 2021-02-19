@@ -1,10 +1,10 @@
 <?php
 use UNL\Templates\Templates;
 
-$page = Templates::factory('Local', Templates::VERSION_5_2);
+$page = Templates::factory('Local', Templates::VERSION_5_3);
 
 $wdn_include_path = \SiteMaster\Core\Util::getRootDir();
-if (file_exists($wdn_include_path . '/wdn/templates_5.2')) {
+if (file_exists($wdn_include_path . '/wdn/templates_5.3')) {
     $page->setLocalIncludePath($wdn_include_path);
 }
 
@@ -18,7 +18,7 @@ $page->pagetitle = '<h1>' . $context->output->getPageTitle() . '</h1>';
 $page->affiliation = '';
 
 // Add WDN Deprecated Styles
-$page->head .= '<link rel="preload" href="/wdn/templates_5.2/css/deprecated.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"> <noscript><link rel="stylesheet" href="/wdn/templates_5.2/css/deprecated.css"></noscript>';
+$page->head .= '<link rel="preload" href="/wdn/templates_5.3/css/deprecated.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"> <noscript><link rel="stylesheet" href="/wdn/templates_5.3/css/deprecated.css"></noscript>';
 
 //Navigation
 $page->breadcrumbs  = '
