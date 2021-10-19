@@ -1,6 +1,6 @@
 .head-container a:visited,
 .head-container a {
-  color: #ac0000 !important;
+  color: var(--link, #d00000);
 }
 
 .integration-notes h3 {
