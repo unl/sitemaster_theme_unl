@@ -55,7 +55,7 @@ $metric_grades = $context->page->getMetricGrades();
     <div class="dcf-col-100% dcf-col-67%-end@md">
 	    <?php if (!$context->page->isComplete()): ?>
             <div class="panel notice">
-                <img src="<?php echo $base_url . 'www/images/loading.gif' ?>" aria-hidden="true" />
+                <img src="<?php echo $base_url . 'www/images/loading.gif' ?>" alt="Page scan in process" aria-hidden="true" />
                 The scan for this page has not finished yet.  This page will automatically refresh every ten seconds until page scan is complete.
             </div>
             <script>
