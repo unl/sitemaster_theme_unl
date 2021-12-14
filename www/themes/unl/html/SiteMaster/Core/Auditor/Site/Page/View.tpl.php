@@ -53,15 +53,15 @@ $metric_grades = $context->page->getMetricGrades();
     </div>
 
     <div class="dcf-col-100% dcf-col-67%-end@md">
-        <?php
-        if (!$context->page->isComplete()) {
-            ?>
+	    <?php if (!$context->page->isComplete()): ?>
             <div class="panel notice">
-                The scan has not finished for this page yet. Refresh the page to get the most recent progress.
+                <img src="<?php echo $base_url . 'www/images/loading.gif' ?>" aria-hidden="true" />
+                The scan for this page has not finished yet.  This page will automatically refresh every ten seconds until page scan is complete.
             </div>
-        <?php
-        }
-        ?>
+            <script>
+              setTimeout(function() { location.reload(); }, 10000);
+            </script>
+	    <?php endif; ?>
 
         <section class="page-scan-content">
             <header>
