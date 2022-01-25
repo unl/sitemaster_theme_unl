@@ -125,6 +125,16 @@ $page->addScriptDeclaration(
 ga('create', 'UA-3203435-18', 'auto');
 ga('send', 'pageview');");
 
+$siteNotice = \SiteMaster\Core\Config::get('siteNotice');
+if (!empty($siteNotice) && is_array($siteNotice) && $siteNotice['display'] === true) {
+    $page->displayDCFNoticeMessage(
+        $siteNotice['title'],
+        $siteNotice['message'],
+        $siteNotice['type'],
+        $siteNotice['noticePath'],
+        $siteNotice['containerID']);
+}
+
 // Render any dynamic body src scripts loaded for page
 foreach($savvy->getScripts($savvy::SCRIPT_LOCATION_ANY) as $script) {
     if ($script instanceof SiteMaster\Core\Script) {
