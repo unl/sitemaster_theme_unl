@@ -25,7 +25,8 @@ class Listener extends PluginListener
             return;
         }
 
-        $event->addStyleSheet(Config::get('URL') . 'plugins/theme_unl/www/themes/unl/html/css/all.css');
+        $cb = date('Ymd');
+        $event->addStyleSheet(Config::get('URL') . 'plugins/theme_unl/www/themes/unl/html/css/all.css?cb=' . $cb);
     }
 
     /**
@@ -41,6 +42,7 @@ class Listener extends PluginListener
         $event->removeScript(Config::get('URL') . 'www/js/vendor/modernizr.js');
 
         //Add scripts
-        $event->addScript(Config::get('URL') . 'plugins/theme_unl/www/themes/unl/html/js/all.js');
+        $cb = date('Ymd');
+        $event->addScript(Config::get('URL') . 'plugins/theme_unl/www/themes/unl/html/js/all.js?cb=' . $cb);
     }
 }
