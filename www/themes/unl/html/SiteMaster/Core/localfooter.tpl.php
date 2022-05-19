@@ -1,6 +1,6 @@
 <div id="dcf-footer-group-1">
   <h2 class="dcf-txt-md dcf-bold dcf-uppercase dcf-lh-3 unl-ls-2 unl-cream" id="dcf-footer-group-1-heading">About Web Audit</h2>
-  <p>This application is a product of the <a href="https://dxg.unl.edu/">Digital Experience Group at Nebraska</a>. DXG is a partnership of <a href="https://ucomm.unl.edu/">University Communication</a> and <a href="https://its.unl.edu/">Information Technology Services</a>.</p>
+  <p>This application is a product of the <a href="https://dxg.unl.edu/">Digital Experience Group</a> at <a href="https://www.unl.edu/">Nebraska</a>. DXG is part of <a href="https://ucomm.unl.edu/">University Communication &amp; Marketing</a>.</p>
   <p>Web Audit is administrated by the <a href="https://wdn.unl.edu/shared-governance-board">WDN Governance Board</a>.</p>
 </div>
 <div id="dcf-footer-group-2">
