@@ -2,9 +2,9 @@
   <p class="dcf-txt-lg">Web Audit helps you maintain your site by running automatic audits that help you find and fix problems that affect user experience. We also provides a <a href="<?php echo $base_url . 'registry/' ?>">registry</a> of sites, which can be used as a <abbr class="dcf-txt-sm" title="who is">WHOIS</abbr> service or as a source of role assignments that can be used by other systems like <a href="https://ucommchat.unl.edu/">UNLchat</a>.</p>
   <div class="dcf-mt-4">
       <?php if ($user): ?>
-          <a class="dcf-btn dcf-btn-secondary" href="<?php echo $user->getURL() ?>">My sites</a>
+          <a class="dcf-btn dcf-btn-primary" href="<?php echo $user->getURL() ?>">View your sites</a>
       <?php else: ?>
-          <a class="dcf-btn dcf-btn-secondary" href="<?php echo $base_url ?>auth/unl/">My sites</a>
+          <a class="dcf-btn dcf-btn-primary" href="<?php echo $base_url ?>auth/unl/">Log in</a>
       <?php endif; ?>
       <a class="dcf-btn dcf-btn-secondary" href="<?php echo $base_url ?>registry/">Find a site</a>
       <?php if ($user): ?>
@@ -13,13 +13,6 @@
           <a class="dcf-btn dcf-btn-secondary" href="<?php echo $base_url ?>auth/unl/?r=<?php echo urlencode($base_url . 'sites/add/') ?>">Add a site</a>
       <?php endif; ?>
   </div>
-  <?php if (!$user): ?>
-      <div class="dcf-mt-4">
-          <a class="dcf-btn dcf-btn-secondary" href="<?php echo $base_url ?>auth/shib/">Log in from a different institution</a>
-          <span class="dcf-mr-2 dcf-ml-2 dcf-txt-xs dcf-italic unl-dark-gray">or</span>
-          <a class="dcf-btn dcf-btn-secondary" href="<?php echo $base_url ?>auth/google/">Log in with Google</a>
-      </div>
-  <?php endif ?>
 </div>
 <div class="dcf-bleed dcf-wrapper dcf-pt-9 dcf-pb-9 unl-bg-lightest-gray">
     <div class="dcf-w-max-lg">
@@ -34,6 +27,12 @@
             <li>Spelling <small class="dcf-badge dcf-badge-roundrect unl-font-sans">beta</small></li>
         </ul>
         <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:dxg@listserv.unl.edu">e-mail us</a>.</p>
+      
+        <?php if (!$user): ?>
+            <div class="dcf-mt-4">
+                <a class="dcf-btn dcf-btn-secondary" href="<?php echo $base_url ?>auth/shib/">Log in from a different institution</a>
+            </div>
+        <?php endif ?>
     </div>
 </div>
 <div class="dcf-pt-9 dcf-pb-9">
