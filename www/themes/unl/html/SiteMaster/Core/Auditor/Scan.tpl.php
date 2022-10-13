@@ -136,7 +136,7 @@ $site_pass_fail = $context->isPassFail();
     
     <div class="dcf-grid dcf-col-gap-vw">
         <div class="dcf-col-100% dcf-col-33%-start@md">
-            <section class="in-page-nav info-section">
+            <section class="in-page-nav info-section web-audit-sticky">
                 <header>
                     <h3>Report Navigation</h3>
                 </header>

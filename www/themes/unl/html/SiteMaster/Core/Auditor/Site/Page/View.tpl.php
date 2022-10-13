@@ -15,9 +15,9 @@ $metric_grades = $context->page->getMetricGrades();
     </div>
 </header>
 
-<div class="dcf-grid">
+<div class="dcf-grid dcf-col-gap-vw">
     <div class="dcf-col-100% dcf-col-33%-start@md">
-        <section class="in-page-nav info-section">
+        <section class="in-page-nav info-section web-audit-sticky">
             <div>
                 <header>
                     <h2>Scan Information</h2>
