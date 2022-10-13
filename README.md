@@ -13,6 +13,8 @@ add a line to the PLUGINS config for the `theme_unl` plugin you just cloned.
 
 `'theme_unl' => [],`
 
+The wdn folder containing the templates_#.# should be symlinked to `./wdn` in the root of your project 
+
 Then, install the plugin by running `php scripts/install.php` which will install any dependencies and add
 it to the list of installed plugins.
 
