@@ -26,7 +26,7 @@
             <li><abbr class="dcf-txt-sm" title="Search Engine Optimization">SEO</abbr> auditing</li>
             <li>Spelling <small class="dcf-badge dcf-badge-roundrect unl-font-sans">beta</small></li>
         </ul>
-        <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:dxg@listserv.unl.edu">e-mail us</a>.</p>
+        <p>If you have any questions, need a higher page limit, or need any customizations, please <a href="mailto:dxg@lists.nebraska.edu">e-mail us</a>.</p>
       
         <?php if (!$user): ?>
             <div class="dcf-mt-4">
