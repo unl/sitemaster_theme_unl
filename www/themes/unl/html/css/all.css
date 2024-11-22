@@ -10,3 +10,17 @@
 .dcf-notice {
   margin-top: 1em;
 }
+
+.unl_sitemaster_panel {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--b);
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: var(--bg-dialog);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
