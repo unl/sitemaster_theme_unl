@@ -30,9 +30,11 @@ $site_pass_fail = $context->isPassFail();
         <?php
         if (!$context->isComplete()) {
             ?>
-            <div class="panel notice">
-                <img src="<?php echo $base_url . 'www/images/loading.gif' ?>" aria-hidden="true" />
-                This scan has not finished yet.  This page will automatically refresh when the scan has completed.  In the meantime you can view <a href="<?php echo $site->getURL() . 'scans/' ?>">previous scans</a>.
+            <div class="unl_sitemaster_panel notice">
+                <div class="dcf-progress-spinner dcf-w-7 dcf-h-7"></div>
+                <span>
+                    This scan has not finished yet. This page will automatically refresh when the scan has completed.  In the meantime you can view <a href="<?php echo $site->getURL() . 'scans/' ?>">previous scans</a>.
+                </span>
             </div>
         <?php
         }
