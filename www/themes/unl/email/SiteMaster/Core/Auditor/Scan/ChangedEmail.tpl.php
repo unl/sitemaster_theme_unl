@@ -6,13 +6,12 @@
 $site           = $context->scan->getSite();
 $previous_scan  = $context->scan->getPreviousScan();
 $site_pass_fail = $context->scan->isPassFail();
+
+// This file will let us customize our emails that are sent out
 ?>
 <p>
     Hello, Fellow Web Developer!
 </p>
-<p><strong>
-    Have you moved your website to the new CMS? The current version is going offline in the fall. Information on moving your site to the Next-Gen CMS can be found at <a href="https://cms.unl.edu">cms.unl.edu</a>.
-</strong></p>
 <p>
     <?php echo \SiteMaster\Core\Config::get('SITE_TITLE') ?> has a <a href="<?php echo $site->getURL();?>">new report</a> for your site <?php echo $site->base_url ?>.
 </p>
